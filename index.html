@@ -1,0 +1,353 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>Piyush Trust — DEMAT & Expert Calls</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+
+    body {
+
+      margin: 0;
+
+      font-family: 'Montserrat', sans-serif;
+
+      background: linear-gradient(135deg, #e5e8eb, #b2bec3, #00b894, #0984e3);
+
+      background-size: 400% 400%;
+
+      animation: gradientShift 10s ease infinite;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      height: 100vh;
+
+      text-align: center;
+
+      overflow: hidden;
+
+    }
+
+    @keyframes gradientShift {
+
+      0% { background-position: 0% 50%; }
+
+      50% { background-position: 100% 50%; }
+
+      100% { background-position: 0% 50%; }
+
+    }
+
+    .container {
+
+      backdrop-filter: blur(20px);
+
+      background: rgba(255, 255, 255, 0.15);
+
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+
+      border-radius: 25px;
+
+      padding: 40px 30px;
+
+      max-width: 420px;
+
+      width: 90%;
+
+      position: relative;
+
+      overflow: hidden;
+
+      border: 1px solid rgba(255, 255, 255, 0.2);
+
+    }
+
+    /* Shimmer overlay */
+
+    .container::before {
+
+      content: "";
+
+      position: absolute;
+
+      top: 0;
+
+      left: -75%;
+
+      width: 50%;
+
+      height: 100%;
+
+      background: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+
+      animation: shimmer 3s infinite;
+
+    }
+
+    @keyframes shimmer {
+
+      0% { left: -75%; }
+
+      100% { left: 125%; }
+
+    }
+
+    .logo-circle {
+
+      width: 110px;
+
+      height: 110px;
+
+      border-radius: 50%;
+
+      background: linear-gradient(135deg, #0984e3, #00b894);
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      margin: 0 auto 25px;
+
+      color: #fff;
+
+      font-size: 20px;
+
+      font-weight: 800;
+
+      box-shadow: 0 8px 20px rgba(11,136,255,0.4);
+
+      position: relative;
+
+      overflow: hidden;
+
+      animation: pulse 3s infinite;
+
+    }
+
+    .logo-circle::after {
+
+      content: "";
+
+      position: absolute;
+
+      top: 0;
+
+      left: -75%;
+
+      width: 50%;
+
+      height: 100%;
+
+      background: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%);
+
+      animation: shimmer 3s infinite;
+
+    }
+
+    @keyframes pulse {
+
+      0% { transform: scale(1); box-shadow: 0 0 15px rgba(11,136,255,0.4); }
+
+      50% { transform: scale(1.05); box-shadow: 0 0 30px rgba(0,184,148,0.6); }
+
+      100% { transform: scale(1); box-shadow: 0 0 15px rgba(11,136,255,0.4); }
+
+    }
+
+    h1 {
+
+      font-size: 20px;
+
+      color: #0b253a;
+
+      margin-bottom: 15px;
+
+      font-weight: 800;
+
+    }
+
+    p {
+
+      font-size: 15px;
+
+      color: #333;
+
+      margin: 8px 0;
+
+    }
+
+    .highlight { color: #0984e3; font-weight: 700; }
+
+    .green { color: #00b894; font-weight: 700; }
+
+    .red { color: #e11d48; font-weight: 700; }
+
+    .btn {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      margin-top: 25px;
+
+      background: linear-gradient(90deg, #000000, #434343);
+
+      color: #fff;
+
+      text-decoration: none;
+
+      padding: 12px 25px;
+
+      border-radius: 12px;
+
+      font-weight: 700;
+
+      transition: all 0.3s ease;
+
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+
+      position: relative;
+
+      overflow: hidden;
+
+    }
+
+    .btn svg {
+
+      width: 20px;
+
+      height: 20px;
+
+      fill: #00bfff;
+
+      transition: transform 0.3s ease;
+
+    }
+
+    .btn:hover svg { transform: rotate(10deg) scale(1.2); }
+
+    .btn:hover {
+
+      background: linear-gradient(90deg, #00b894, #0984e3);
+
+      box-shadow: 0 0 25px rgba(0,184,148,0.6);
+
+      transform: scale(1.05);
+
+    }
+
+    .btn-glow {
+
+      animation: glow 2s infinite alternate;
+
+    }
+
+    @keyframes glow {
+
+      from { box-shadow: 0 0 10px rgba(0,184,148,0.5); }
+
+      to { box-shadow: 0 0 25px rgba(9,132,227,0.8); }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="logo-circle">Piyush<br>Trust</div>
+
+    <a href="https://t.me/piyushtrust" class="btn btn-glow" target="_blank">
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.993 15.385l-.395 5.582c.563 0 .806-.242 1.098-.532l2.635-2.52 5.46 3.993c1.002.553 1.717.263 1.976-.93l3.584-16.72h.001c.317-1.48-.534-2.06-1.515-1.7L1.76 9.01c-1.454.57-1.433 1.388-.247 1.758l5.55 1.73 12.868-8.117c.605-.37 1.156-.165.703.206z"/></svg>
+
+      Join Telegram channel 
+
+    </a>
+
+    <h1>GET EXPERT CALLS FOR NIFTY</h1>
+
+    <p>📊 Banknifty & Stock options with <span class="highlight">90%</span></p>
+
+    <p>🔍 1 - 4 Risk reward ratio daily 2 - 3</p>
+
+    <p>🎯 Target 100+ Points</p>
+
+    <hr style="margin: 25px 0; border: none; border-top: 2px dashed rgba(255,255,255,0.3);">
+
+    <h1>DEMAT ACCOUNT HANDLING</h1>
+
+    <p>💰 Minimum 50k capital required</p>
+
+    <p>📈 10-25% daily profit return</p>
+
+    <p class="green">🤝 50% Sharing after profit</p>
+
+    <p>⚙️ Maximum risk 5% only</p>
+
+    <p class="red">🏆 15 Year's experience</p>
+
+    <a href="https://t.me/piyushtrust" class="btn" target="_blank">
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.993 15.385l-.395 5.582c.563 0 .806-.242 1.098-.532l2.635-2.52 5.46 3.993c1.002.553 1.717.263 1.976-.93l3.584-16.72h.001c.317-1.48-.534-2.06-1.515-1.7L1.76 9.01c-1.454.57-1.433 1.388-.247 1.758l5.55 1.73 12.868-8.117c.605-.37 1.156-.165.703.206z"/></svg>
+
+      Join Telegram Channel
+
+    </a>
+
+  </div>
+
+  <!-- Meta Pixel Code -->
+
+  <script>
+
+  !function(f,b,e,v,n,t,s)
+
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+
+  n.queue=[];t=b.createElement(e);t.async=!0;
+
+  t.src=v;s=b.getElementsByTagName(e)[0];
+
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+
+  'https://connect.facebook.net/en_US/fbevents.js');
+
+  fbq('init', '586157684559151');
+
+  fbq('track', 'PageView');
+
+  </script>
+
+  <noscript><img height="1" width="1" style="display:none"
+
+  src="https://www.facebook.com/tr?id=586157684559151&ev=PageView&noscript=1"/></noscript>
+
+  <!-- End Meta Pixel Code -->
+
+</body>
+
+</html>
